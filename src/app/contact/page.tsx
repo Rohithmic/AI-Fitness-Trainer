@@ -12,6 +12,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { sendEmail } from "../actions/sendEmail";
 
 const faqs = [
   {
@@ -49,11 +50,13 @@ export default function ContactPage() {
     setError(null);
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log('Form submitted:', formData);
-      setIsSubmitted(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      const result = await sendEmail(formData);
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error(result.error);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       setError("Failed to send message. Please try again later.");

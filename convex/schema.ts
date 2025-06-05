@@ -43,13 +43,4 @@ export default defineSchema({
   })
     .index("by_user_id", ["userId"])
     .index("by_active", ["isActive"]),
-
-  contactSubmissions: defineTable({
-    name: v.string(),
-    email: v.string(),
-    subject: v.string(),
-    message: v.string(),
-    createdAt: v.number(),
-    status: v.string(), // 'new', 'in-progress', 'resolved'
-  }),
 });

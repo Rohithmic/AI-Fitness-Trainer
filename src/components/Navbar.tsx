@@ -1,12 +1,15 @@
 "use client";
 import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
 import React from "react";
-import { DumbbellIcon, HomeIcon, UserIcon, ZapIcon } from "lucide-react";
+import { DumbbellIcon, HomeIcon, UserIcon, ZapIcon, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { useCart } from "@/context/CartContext";
+import { Badge } from "./ui/badge";
 
 const Navbar = () => {
   const { isSignedIn } = useUser();
+  const { totalItems } = useCart();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/40 py-4 shadow-sm">
@@ -37,6 +40,27 @@ const Navbar = () => {
             >
                 <DumbbellIcon size={18} />
                 <span>Generate</span>
+            </Link>
+
+            <Link
+                href="/shop"
+                className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+                <ShoppingCart size={18} />
+                <span>Shop</span>
+            </Link>
+
+            <Link
+                href="/cart"
+                className="relative flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+                <ShoppingCart size={18} />
+                <span>Cart</span>
+                {totalItems > 0 && (
+                    <Badge variant="secondary" className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0">
+                        {totalItems}
+                    </Badge>
+                )}
             </Link>
 
             <Link
