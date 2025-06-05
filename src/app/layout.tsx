@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CodeFlex AI",
-  description: "Modern AI fitness app to help you reach your fitness goals.",
+  title: "PulseIQ",
+  description: "Your intelligent fitness companion powered by AI.",
 };
 
 export default function RootLayout({
@@ -32,10 +32,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        {/*Grid Background*/}
+        {/*Background with gradient and subtle pattern*/}
         <div className="fixed inset-0 -z-1">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background"></div>
-            <div className="absolute inset-0 bg-[linear-gradient(var(--cyber-grid-color)_1px,transparent_1px),linear-gradient(90deg,var(--cyber-grid-color)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(var(--grid-color)_1px,transparent_1px),linear-gradient(90deg,var(--grid-color)_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         </div>
 
         <main className="pt-24 flex-grow">

@@ -10,7 +10,7 @@ const AboutPage = () => {
         <div className="container mx-auto px-8 md:px-12 lg:px-16">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              About <span className="text-primary">codeflex.ai</span>
+              About <span className="text-primary">PULSEIQ</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               We are revolutionizing fitness through the power of artificial intelligence,
@@ -29,7 +29,7 @@ const AboutPage = () => {
                 Our <span className="text-primary">Mission</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                At codeflex.ai, we believe that everyone deserves access to personalized fitness guidance.
+                At PULSEIQ, we believe that everyone deserves access to personalized fitness guidance.
                 Our mission is to democratize fitness coaching by leveraging cutting-edge AI technology
                 to create customized workout and nutrition plans that adapt to your unique needs and goals.
               </p>
@@ -65,7 +65,7 @@ const AboutPage = () => {
         <div className="container mx-auto px-8 md:px-12 lg:px-16">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight mb-4">
-              Why Choose <span className="text-primary">codeflex.ai</span>
+              Why Choose <span className="text-primary">PULSEIQ</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Our platform combines cutting-edge technology with fitness expertise to deliver
