@@ -200,7 +200,7 @@ const GenerateProgramPage = () => {
                   <img
                     src="/ai-avatar.png"
                     alt="AI Assistant"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[140%] object-cover object-top"
                   />
                 </div>
               </div>
