@@ -26,83 +26,83 @@ const Navbar = () => {
 
         {/*Navigation*/}
         <nav className="flex items-center gap-6">
-        {isSignedIn ? (
-            <>
-            <Link href="/"
+          <Link href="/"
             className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                <HomeIcon size={18} />
-                <span>Home</span>
-            </Link>
+            <HomeIcon size={18} />
+            <span>Home</span>
+          </Link>
 
-            <Link
+          {isSignedIn ? (
+            <>
+              <Link
                 href="/generate-program"
                 className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
+              >
                 <DumbbellIcon size={18} />
                 <span>Generate</span>
-            </Link>
+              </Link>
 
-            <Link
+              <Link
                 href="/shop"
                 className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
+              >
                 <ShoppingCart size={18} />
                 <span>Shop</span>
-            </Link>
+              </Link>
 
-            <Link
+              <Link
                 href="/cart"
                 className="relative flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
+              >
                 <ShoppingCart size={18} />
                 <span>Cart</span>
                 {totalItems > 0 && (
-                    <Badge variant="secondary" className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0">
-                        {totalItems}
-                    </Badge>
+                  <Badge variant="secondary" className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0">
+                    {totalItems}
+                  </Badge>
                 )}
-            </Link>
+              </Link>
 
-            <Link
-             href="/profile"
-             className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
+              <Link
+                href="/profile"
+                className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
                 <UserIcon size={18} />
                 <span>Profile</span>
-            </Link>
+              </Link>
 
-            <div className="flex items-center gap-3 ml-2">
+              <div className="flex items-center gap-3 ml-2">
                 <Button
-                    asChild
-                    variant="outline"
-                    className="border-primary/50 text-primary hover:text-white hover:bg-primary hover:border-primary transition-all duration-200"
+                  asChild
+                  variant="outline"
+                  className="border-primary/50 text-primary hover:text-white hover:bg-primary hover:border-primary transition-all duration-200"
                 >
-                    <Link href="/generate-program">Get Started</Link>
+                  <Link href="/generate-program">Get Started</Link>
                 </Button>
                 <div className="hover:opacity-80 transition-opacity">
-                    <UserButton afterSignOutUrl="/" />
+                  <UserButton afterSignOutUrl="/" />
                 </div>
-            </div>
+              </div>
             </>
-        ) : (
+          ) : (
             <>
-            <SignInButton>
+              <SignInButton>
                 <Button variant="ghost"
-                    className="text-muted-foreground hover:text-primary hover:bg-primary/10"
-                    >
-                        Sign In
-                    </Button>
-            </SignInButton>
+                  className="text-muted-foreground hover:text-primary hover:bg-primary/10"
+                  >
+                    Sign In
+                  </Button>
+              </SignInButton>
 
-            <SignUpButton>
+              <SignUpButton>
                 <Button variant="default"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                    >
-                        Sign Up
-                    </Button>
-            </SignUpButton>
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  >
+                    Sign Up
+                  </Button>
+              </SignUpButton>
             </>
-        )}
+          )}
         </nav>
       </div>
     </header>

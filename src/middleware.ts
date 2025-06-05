@@ -1,7 +1,16 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
-const publicPaths = ["/", "/sign-in", "/sign-up"];
+const publicPaths = [
+  "/",
+  "/sign-in",
+  "/sign-up",
+  "/privacy",
+  "/terms",
+  "/legal/cancellation-refund",
+  "/legal/shipping-delivery",
+  "/contact"
+];
 
 const isPublic = (path: string) => {
   return publicPaths.find((x) => path === x);
