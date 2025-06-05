@@ -64,7 +64,7 @@ const ContactPage = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
           <p className="text-muted-foreground text-lg">
-            Have questions? We're here to help. Send us a message or check our FAQs below.
+            Have questions? We&apos;re here to help. Send us a message or check our FAQs below.
           </p>
         </div>
 
@@ -76,7 +76,7 @@ const ContactPage = () => {
                 <CheckCircle2 className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
                 <p className="text-muted-foreground">
-                  Thank you for contacting us. We'll get back to you soon.
+                  Thank you for contacting us. We will get back to you soon.
                 </p>
               </div>
             ) : (
