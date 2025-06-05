@@ -97,6 +97,31 @@ export default function ContactPage() {
           </Accordion>
         </div>
 
+        {/* Company Contact Details Section */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold mb-6 text-center">Company Information</h2>
+          <Card className="p-6 max-w-2xl mx-auto">
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Company</h3>
+                <p className="text-muted-foreground">pulseIQ</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Registered Address</h3>
+                <p className="text-muted-foreground">234/2/3, Pratibha Kendra Line, Chhota Govindpur Jamshedpur JHARKHAND 831015</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Telephone</h3>
+                <p className="text-muted-foreground">+91 98765 43210</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Email</h3>
+                <p className="text-muted-foreground">ratnam@pulseiq.xyz</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+
         {/* Contact Form Section */}
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-semibold mb-6 text-center">Send Us a Message</h2>
